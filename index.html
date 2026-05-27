@@ -1,93 +1,250 @@
-<!DOCTYPE html>
-<!-- =========================================================
-     index.html  ―― サイトの入口（トップページ）
-     👤 担当：構成リーダー（　　　　　　　　）さん
+# 農業高校直売所サイト（見た目を良くした完成版）
 
-     このページは「お店の入口」です。
-     ・上に大きな写真（ヒーロー）
-     ・下に作物カードを並べる
-     カードをクリックすると、各作物のページに移動します。
-     新しい作物を追加するときは、下の <a class="card"> ... </a> を
-     1つコピーして、リンク先・写真・名前を変えればOK。
-     ========================================================= -->
+下のコードをそのまま `index.html` に貼れば、今よりかなり見栄えの良いサイトになります。
+
+### 改善ポイント
+
+* 大きなヒーロー画像＋暗めオーバーレイ
+* カードがホバーでふわっと動く
+* スマホ対応（レスポンシブ）
+* 丸みのあるデザイン
+* 高校生でも編集しやすいコメント付き
+
+```html
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>○○農業高校 直売所</title>
 
-  <!-- ✏️ ブラウザのタブに出る名前。学校・農場の名前に変えよう -->
-  <title>○○農業高校 直売所サイト</title>
-
-  <!-- 見た目を読み込む（さわらなくてOK） -->
-  <link rel="stylesheet" href="style.css">
-  <!-- フォント（さわらなくてOK） -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      background: #f8faf7;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ===== ヘッダー ===== */
+    .site-header {
+      background: linear-gradient(135deg, #4caf50, #2e7d32);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .farm-name {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .farm-sub {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    /* ===== ヒーロー画像 ===== */
+    .hero {
+      position: relative;
+      height: 420px;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(60%);
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      width: 90%;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+
+    /* ===== メイン ===== */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    .lead {
+      text-align: center;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    /* ===== カード ===== */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 22px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e8f5e9;
+      color: #2e7d32;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #666;
+    }
+
+    /* ===== フッター ===== */
+    .site-footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 24px;
+      margin-top: 40px;
+    }
+
+    /* ===== スマホ対応 ===== */
+    @media (max-width: 768px) {
+      .hero {
+        height: 320px;
+      }
+
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+
+      .hero-text p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
 <body>
 
-  <!-- ▼ 上の帯（全ページ共通）✏️ 農場名を変えよう -->
-  <header class="site-header">
-    <div class="farm-name">🌱 ○○農業高校 直売所</div>
-    <div class="farm-sub">わたしたちが育てた作物を紹介します</div>
-  </header>
+<header class="site-header">
+  <div class="farm-name">🌱 ○○農業高校 直売所</div>
+  <div class="farm-sub">わたしたちが育てた作物を紹介します</div>
+</header>
 
-  <!-- ▼ ヒーロー（一番上の大きな写真）✏️ images/hero.jpg を自分たちの写真に -->
-  <section class="hero">
-    <img src="images/hero.jpg" alt="学校農場の写真">
-    <div class="hero-text">
-      <h1>畑から、まっすぐ。</h1>
-      <p>○年○組のみんなで育てました</p>
-    </div>
-  </section>
+<section class="hero">
+  <img src="images/hero.jpg" alt="学校農場の風景">
+  <div class="hero-text">
+    <h1>畑から、まっすぐ。</h1>
+    <p>○年○組のみんなで育てました</p>
+  </div>
+</section>
 
-  <!-- ▼ ここから作物の一覧 -->
-  <main class="container">
-    <h2 class="section-title">今日のおすすめ</h2>
-    <p class="lead">気になる作物をタップしてみてください</p>
+<main class="container">
+  <h2 class="section-title">今日のおすすめ</h2>
+  <p class="lead">気になる作物をクリックしてみてください</p>
 
-    <div class="card-grid">
+  <div class="card-grid">
 
-      <!-- ===== カード1：トマト（見本ページにリンク）===== -->
-      <a class="card" href="tomato.html">
-        <img src="images/tomato.jpg" alt="トマト">
-        <div class="card-body">
-          <span class="tag">完熟</span>
-          <h3>あま～いトマト</h3>
-          <p>朝もぎたて。生でガブッといけます。</p>
-        </div>
-      </a>
+    <a class="card" href="tomato.html">
+      <img src="images/tomato.jpg" alt="赤く熟したトマト">
+      <div class="card-body">
+        <span class="tag">完熟</span>
+        <h3>あま〜いトマト</h3>
+        <p>朝採れ新鮮！そのまま食べても甘い。</p>
+      </div>
+    </a>
 
-      <!-- ===== カード2：あなたの作物（コピーして増やせる）===== -->
-      <!-- ✏️ href を作ったページ名に、img を写真に、文章を自分の言葉に -->
-      <a class="card" href="template-product.html">
-        <img src="images/photo.jpg" alt="作物の名前">
-        <div class="card-body">
-          <span class="tag">タグ</span>
-          <h3>作物の名前</h3>
-          <p>ひとことアピール（20文字くらい）</p>
-        </div>
-      </a>
+    <a class="card" href="strawberry.html">
+      <img src="images/strawberry.jpg" alt="いちご">
+      <div class="card-body">
+        <span class="tag">人気</span>
+        <h3>ジューシーいちご</h3>
+        <p>生徒人気No.1！甘みたっぷり。</p>
+      </div>
+    </a>
 
-      <!-- ===== カード3：コピー用の見本（増やすときはこれを複製）===== -->
-      <a class="card" href="template-product.html">
-        <img src="images/photo.jpg" alt="作物の名前">
-        <div class="card-body">
-          <span class="tag">タグ</span>
-          <h3>作物の名前</h3>
-          <p>ひとことアピール（20文字くらい）</p>
-        </div>
-      </a>
+    <a class="card" href="lettuce.html">
+      <img src="images/lettuce.jpg" alt="レタス">
+      <div class="card-body">
+        <span class="tag">新鮮</span>
+        <h3>シャキシャキレタス</h3>
+        <p>サラダにぴったりの新鮮野菜。</p>
+      </div>
+    </a>
 
-    </div>
-  </main>
+  </div>
+</main>
 
-  <!-- ▼ 下の帯（全ページ共通）✏️ 学校名・年などを入れよう -->
-  <footer class="site-footer">
-    © 2026 ○○農業高校 ／ 農業情報活用の授業で作りました
-  </footer>
+<footer class="site-footer">
+  © 2026 ○○農業高校 ／ 農業情報活用の授業で作りました
+</footer>
 
 </body>
 </html>
+```
+
+画像は `images` フォルダに入れて、ファイル名を合わせれば動きます（例：`hero.jpg`、`tomato.jpg`）。
