@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>きゅうりワンダーランド | 究極のみずみずしさをあなたに</title>
+    <style>
+        /* 全体のスタイル */
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2c3e50;
+            background-color: #f9fbf9;
+            line-height: 1.6;
+        }
+
+        /* ヘッダー */
+        header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* メインビジュアル */
+        .hero {
+            background: linear-gradient(rgba(46, 125, 50, 0.4), rgba(46, 125, 50, 0.4)), url('https://images.unsplash.com/photo-1449339854873-750e6df51301?auto=format&fit=crop&q=80&w=1200') no-repeat center center/cover;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+        .hero-text {
+            text-align: center;
+        }
+        .hero-text h2 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        /* コンテンツコンテナ */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* セクション共通 */
+        section {
+            margin-bottom: 60px;
+        }
+        h3 {
+            font-size: 1.8rem;
+            color: #2e7d32;
+            border-left: 5px solid #81c784;
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        /* 特徴（グリッド表示） */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid #2e7d32;
+        }
+        .feature-card h4 {
+            margin-top: 0;
+            color: #1b5e20;
+            font-size: 1.3rem;
+        }
+
+        /* おすすめレシピ */
+        .recipe-list {
+            list-style: none;
+            padding: 0;
+        }
+        .recipe-item {
+            background: white;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .recipe-name {
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+        /* フッター */
+        footer {
+            background-color: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>きゅうりワンダーランド</h1>
+        <p>〜 96%の水分の裏に隠された、無限の可能性 〜</p>
+    </header>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h2>パリッ、シャキッ、世界を潤す。</h2>
+            <p>一口かじれば広がる、圧倒的爽快感。</p>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <section id="about">
+            <h3>きゅうりの3大魅力</h3>
+            <div class="features">
+                <div class="feature-card">
+                    <h4>① 驚異の水分補給力</h4>
+                    <p>きゅうりの約96%は水分。食べる天然のスポーツドリンクとも言われ、夏の熱中症対策や体に潤いを与えるのに最適です。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>② ギネス認定の低カロリー</h4>
+                    <p>「世界一カロリーが低い果実」としてギネスに載るほどヘルシー。ダイエット中の強い味方です（100gあたり約14kcal）。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>③ カリウムでスッキリ</h4>
+                    <p>豊富なカリウムが含まれており、体内の余分な塩分（ナトリウム）を排出。むくみ解消やデトックスに効果大です。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="recipes">
+            <h3>今夜試せる！極上きゅうりレシピ</h3>
+            <ul class="recipe-list">
+                <li class="recipe-item">
+                    <div>
+                        <span class="recipe-name">無限たたききゅうり</span>
+                        <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #666;">ごま油、鶏ガラスープの素、にんにくと和えるだけ。おつまみに最強。</p>
+                    </div>
+                </li>
+                <li class="recipe-item">
+                    <div>
+                        <span class="recipe-name">きゅうりと塩昆布の浅漬け</span>
+                        <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #666;">ポリ袋で揉んで5分。日本の食卓のスタメン決定です。</p>
+                    </div>
+                </li>
+                <li class="recipe-item">
+                    <div>
+                        <span class="recipe-name">蛇腹きゅうりのピリ辛甘酢漬け</span>
+                        <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #666;">細かく切れ目を入れてタレを染み込ませれば、極上の歯ごたえに。</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="tips">
+            <h3>美味しいきゅうりの見分け方</h3>
+            <blockquote>
+                <strong>ここをチェック！</strong><br>
+                1. 全体にトゲが尖っていて触ると痛いくらいのもの（新鮮な証拠です）<br>
+                2. 太さが均一で、ずっしりと重みがあるもの<br>
+                3. 緑色が濃く、鮮やかなもの
+            </blockquote>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 きゅうりワンダーランド / All Rights Reserved. </p>
+    </footer>
+
+</body>
+</html>
