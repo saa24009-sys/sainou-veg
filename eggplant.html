@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE eggplant | ナスの魅力を味わい尽くす</title>
+    <style>
+        /* 全体のスタイル */
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fbfafc;
+            line-height: 1.6;
+        }
+
+        /* ヘッダー */
+        header {
+            background-color: #4a154b; /* 深いナス紫 */
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.6rem;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 1rem;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+
+        /* メインビジュアル */
+        .hero {
+            background: linear-gradient(rgba(74, 21, 75, 0.5), rgba(74, 21, 75, 0.3)), url('https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=1200') no-repeat center center/cover;
+            height: 380px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+        .hero-text {
+            text-align: center;
+        }
+        .hero-text h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* コンテンツコンテナ */
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* セクション共通 */
+        section {
+            margin-bottom: 60px;
+        }
+        h3 {
+            font-size: 1.8rem;
+            color: #4a154b;
+            border-left: 5px solid #9c27b0;
+            padding-left: 15px;
+            margin-bottom: 35px;
+        }
+
+        /* 特徴（グリッド表示） */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+            border-top: 4px solid #4a154b;
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-card h4 {
+            margin-top: 0;
+            color: #4a154b;
+            font-size: 1.3rem;
+        }
+
+        /* おすすめレシピ */
+        .recipe-list {
+            list-style: none;
+            padding: 0;
+        }
+        .recipe-item {
+            background: white;
+            margin-bottom: 15px;
+            padding: 20px 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border-left: 4px solid #9c27b0;
+        }
+        .recipe-name {
+            font-weight: bold;
+            color: #4a154b;
+            font-size: 1.1rem;
+        }
+
+        /* 豆知識 */
+        .trivia-box {
+            background-color: #f3e5f5;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px dashed #9c27b0;
+        }
+
+        /* フッター */
+        footer {
+            background-color: #210324;
+            color: white;
+            text-align: center;
+            padding: 25px 0;
+            margin-top: 80px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>THE eggplant</h1>
+        <p>〜 油を吸って、最高の主役に化ける冬・夏の至高 〜</p>
+    </header>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h2>じゅわっと、とろける幸せ。</h2>
+            <p>和・洋・中、どんな舞台でも輝く万能の食材。</p>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <section id="about">
+            <h3>ナスが愛される3つの理由</h3>
+            <div class="features">
+                <div class="feature-card">
+                    <h4>① 圧倒的な「油」との相性</h4>
+                    <p>果肉がスポンジ状になっているため、油を吸い込むことで劇的に旨味がアップ。加熱すると「とろとろ」の極上食感に変化します。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>② ナス紺の秘密「ナスニン」</h4>
+                    <p>美しい紫色の皮には、特有のポリフェノール「ナスニン」が豊富。強い抗酸化作用があり、美容や健康、目の疲れにも嬉しい成分です。</p>
+                </div>
+                <div class="feature-card">
+                    <h4>③ 体を優しくクールダウン</h4>
+                    <p>水分とカリウムが豊富に含まれているため、体にこもった熱を逃がしてくれる効果があります。夏バテ予防には欠かせません。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="recipes">
+            <h3>ナスのポテンシャルを引き出すレシピ</h3>
+            <ul class="recipe-list">
+                <li class="recipe-item">
+                    <span class="recipe-name">極旨ナスのみそ炒め（しぎ焼き）</span>
+                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #555;">ナスと油、そして味噌の組み合わせは日本人のDNAに響く味。白ご飯が止まらなくなります。</p>
+                </li>
+                <li class="recipe-item">
+                    <span class="recipe-name">じゅわっとジューシー焼きナス</span>
+                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #555;">皮ごと真っ黒になるまで焼き、皮を剥いて生姜醤油で。ナスの本来の甘みと香ばしさがダイレクトに楽しめます。</p>
+                </li>
+                <li class="recipe-item">
+                    <span class="recipe-name">ナスとトマトの本格カポナータ</span>
+                    <p style="margin: 5px 0 0 0; font-size: 0.9rem; color: #555;">オリーブオイルでじっくり炒めたナスは、トマト煮込みにするとコクが爆発。冷やしても絶品です。</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="tips">
+            <h3>美味しいナスの見分け方</h3>
+            <div class="trivia-box">
+                <strong>💡 ここをチェック！</strong><br>
+                <ol style="margin: 10px 0 0 0; padding-left: 20px;">
+                    <li><strong>ヘタの棘（トゲ）：</strong> 触ると痛いくらい尖っているものが新鮮な証拠。</li>
+                    <li><strong>色とツヤ：</strong> 全体が濃い紫色で、ハリとツヤがあり、光を跳ね返すようなもの。</li>
+                    <li><strong>重み：</strong> 手に持ったときに、見た目以上にずっしりと水分を含んだ重みがあるもの。</li>
+                </ol>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 THE eggplant / All Rights Reserved. </p>
+    </footer>
+
+</body>
+</html>
