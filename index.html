@@ -47,11 +47,17 @@ header{
 .hero{
   position:relative;
   height:500px;
+  overflow:hidden; /* 画像のはみ出し防止 */
 }
 
-<div class="hero">
-  <img src="https://assets.st-note.com/production/uploads/images/155472597/rectangle_large_type_2_2d5bb6c82440d92e8ccd572ccd20e4d3.jpeg?width=1200" alt="西条農業高校 西農ロード">
-</div>
+/* ▽▽ 最初に見せてくれたCSSコードをここに追加しました ▽▽ */
+.hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(55%); /* 画像を少し暗くして文字を見やすくする */
+}
+/* △△ ================================================== △△ */
 
 .hero-text{
   position:absolute;
@@ -184,15 +190,16 @@ footer{
   </div>
 </header>
 
+<!-- ▽▽ ここに西農ロードの画像を正しく配置しました ▽▽ -->
 <section class="hero">
-  <img src="images/hero.jpg"
-       alt="農場風景">
+  <img src="https://assets.st-note.com/production/uploads/images/155472597/rectangle_large_type_2_2d5bb6c82440d92e8ccd572ccd20e4d3.jpeg?width=1200" alt="西条農業高校 西農ロード">
 
   <div class="hero-text">
     <h1>畑から、まっすぐ。</h1>
     <p>3年S組のみんなで育てました</p>
   </div>
 </section>
+<!-- △△ ========================================== △△ -->
 
 <main class="container">
 
@@ -264,6 +271,3 @@ alt="なす">
 
 </body>
 </html>
-index.html
-product.html
-images/
