@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!-- 加点：レスポンシブ対応（スマホで見ても崩れない設定） -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マイ作物 紹介サイト</title>
+    <style>
+        /* 条件6：CSSでのデザイン装飾 */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f9f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #81c784;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .crop-section {
+            margin-bottom: 40px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #e8f5e9;
+        }
+        .btn-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2e7d32;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #1b5e20;
+        }
+        /* JavaScript連動用のスタイル */
+        #js-btn {
+            background-color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- 条件1：一番上に大見出し -->
+        <h1>マイ作物 紹介サイト（きゅうり ＆ ナス）</h1>
+    </header>
+
+    <!-- 加点：作物を2つ以上紹介し、ページ内リンクで飛べる -->
+    <nav>
+        <a href="#cucumber">▼ きゅうりの紹介へ</a>
+        <a href="#eggplant">▼ ナスの紹介へ</a>
+    </nav>
+
+    <div class="container">
+        
+        <!-- 【作物1：きゅうりセクション】 -->
+        <section id="cucumber" class="crop-section">
+            <h2>🥒 きゅうり（胡瓜）</h2>
+            
+            <!-- 条件2：特徴の説明文が3文以上 -->
+            <p>きゅうりはウリ科の野菜で、夏を代表するみずみずしい作物のひとつです。水分が豊富に含まれており、暑い夏の水分補給や体を冷やす効果が期待できます。採れたてのきゅうりはトゲが鋭く、パリッとした最高の食感を楽しむことができます。</p>
+            
+            <!-- 条件3：栽培のポイントが箇条書きで3つ以上 -->
+            <h3>栽培のポイント</h3>
+            <ul>
+                <li>根が浅く張るため、乾燥に弱くこまめな水やりが必要です。</li>
+                <li>つるの伸びが非常に早いため、しっかりとした支柱やネットを設置します。</li>
+                <li>最初の5節目までのわき芽や花は、株を大きくするために早めに摘み取ります。</li>
+            </ul>
+
+            <!-- 条件4：表（table）を使って情報をまとめている -->
+            <h3>栽培データ</h3>
+            <table>
+                <tr>
+                    <th>種まき時期</th>
+                    <td>4月〜5月</td>
+                </tr>
+                <tr>
+                    <th>収穫時期</th>
+                    <td>6月〜8月</td>
+                </tr>
+                <tr>
+                    <th>栽培難易度</th>
+                    <td>★★☆☆☆（初心者向け）</td>
+                </tr>
+            </table>
+
+            <!-- 条件5：画像が1枚以上表示されている -->
+            <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb18865?w=500" alt="みずみずしいきゅうり">
+        </section>
+
+
+        <!-- 【作物2：ナスセクション】 -->
+        <section id="eggplant" class="crop-section">
+            <h2>🍆 ナス（茄子）</h2>
+            
+            <!-- 加点：2つ目の作物の説明文（3文以上） -->
+            <p>ナスは南国生まれのナス科植物で、日本の夏から秋にかけて長く収穫できる野菜です。油との相性が抜群に良く、煮物や焼き物、天ぷらなど様々な料理で美味しく食べられます。日光をたくさん浴びることで、皮が綺麗な濃い紫色（ナスニン）に仕上がります。</p>
+            
+            <h3>栽培のポイント</h3>
+            <ul>
+                <li>「ナスは水で育てる」と言われるほど、大量の水分と肥料を必要とします。</li>
+                <li>風通しと日当たりを良くするため、太い主枝3本を残す「3本仕立て」にします。</li>
+                <li>7月下旬頃に枝を切り詰める「更新剪定」を行うと、美味しい秋ナスが収穫できます。</li>
+            </ul>
+
+            <h3>栽培データ</h3>
+            <table>
+                <tr>
+                    <th>種まき時期</th>
+                    <td>3月〜4月（育苗が必要）</td>
+                </tr>
+                <tr>
+                    <th>収穫時期</th>
+                    <td>7月〜10月</td>
+                </tr>
+                <tr>
+                    <th>栽培難易度</th>
+                    <td>★★★☆☆（手入れが重要）</td>
+                </tr>
+            </table>
+
+            <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=500" alt="鮮やかな紫色のナス">
+        </section>
+
+
+        <!-- 【ボタンエリア】 -->
+        <h3>リンク・アクション</h3>
+        <div class="btn-container">
+            <!-- 条件7：西条農業高校へのリンクボタン -->
+            <a href="https://ehm-saijo-ah.esnet.ed.jp/" class="btn" target="_blank">🏫 西条農業高校 公式サイト</a>
+
+            <!-- 条件8：外部の信頼できる栽培方法サイトへのリンクボタン -->
+            <a href="https://sakata-tsushin.com/lesson-vegetable/detail_31/" class="btn" target="_blank">🌱 きゅうりの育て方（サカタのタネ）</a>
+            
+            <!-- 加点：ボタンを押すと色や文字が変わるJavaScriptの仕掛け -->
+            <button id="js-btn" class="btn" onclick="changeButton()">👍 栽培を応援する！</button>
+        </div>
+
+    </div>
+
+    <!-- 加点用JavaScript -->
+    <script>
+        function changeButton() {
+            var btn = document.getElementById('js-btn');
+            btn.innerHTML = '✨ 応援ありがとうございます！';
+            btn.style.backgroundColor = '#e91e63';
+            btn.style.color = '#ffffff';
+        }
+    </script>
+
+</body>
+</html>
